@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:subway/presentation/screen/main_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,21 +16,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(),
+      home: const MainPage(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
-  }
-}
