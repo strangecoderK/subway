@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:subway/domain/model/subway.dart';
 import 'package:subway/presentation/component/subway_card.dart';
 
+import '../component/search_text_field.dart';
+
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
 
@@ -29,6 +31,7 @@ class _MainPageState extends State<MainPage> {
           const SizedBox(
             height: 30,
           ),
+          const Search(hintText: '지하철역을 입력하세요',),
           Expanded(
             child: GridView.builder(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
