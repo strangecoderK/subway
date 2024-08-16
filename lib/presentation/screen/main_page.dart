@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:subway/domain/model/subway.dart';
 import 'package:subway/presentation/component/subway_card.dart';
+import 'package:subway/presentation/screen/main__page_view_model.dart';
 
 import '../component/search_text_field.dart';
 
@@ -21,6 +23,8 @@ const subway = Subway(
 class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
+    final viewModel = context.watch<MainPageViewModel>();
+    final state = viewModel.state;
     return Scaffold(
       appBar: AppBar(
         title: const Text('지하철 실시간 정보'),
@@ -40,7 +44,7 @@ class _MainPageState extends State<MainPage> {
                     crossAxisSpacing: 15),
                 itemCount: 4,
                 itemBuilder: (context, index) {
-                  return const SubwayCard(subway: subway);
+                  return SubwayCard(subway: state.subwayList[index]);
                 }),
           )
         ],
