@@ -11,6 +11,7 @@ class Subway with _$Subway {
     required String subwayId,
     required String trainLineName,
     required String message,
+    required String color,
   }) = _Subway;
 
   factory Subway.fromJson(Map<String, Object?> json) => _$SubwayFromJson(json);

@@ -10,6 +10,6 @@ class SubwayApiImpl implements SubwayApi {
     final response = await http.get(Uri.parse(
         'http://swopenapi.seoul.go.kr/api/subway/sample/json/realtimeStationArrival/0/5/$query'));
     final result = jsonDecode(response.body)['realtimeArrivalList'] as List;
-    return result.map((e) => RealtimeArrivalList.fromJson(result)).toList();
+    return result.map((e) => RealtimeArrivalList.fromJson(e)).toList();
   }
 }

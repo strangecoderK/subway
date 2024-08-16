@@ -13,12 +13,27 @@ class SubwayCard extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(10),
       ),
-      child: Column(
+      child: Column(mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.network(
-              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlg2uy5Yxb0bZc3J5N-61h5E-vkKwvC5To5g&s',height: 150,),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+                decoration: BoxDecoration(
+                    color: Color(int.parse(subway.color)),
+                    borderRadius: BorderRadius.circular(60)),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    subway.subwayId,
+                    style: const TextStyle(color: Colors.white),
+                  ),
+                )),
+          ),
           Text(subway.trainLineName),
-          Text(subway.message),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(subway.message),
+          ),
         ],
       ),
     );

@@ -17,32 +17,26 @@ class Search extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(
-          top: 10.0, bottom: 10.0, left: 30.0, right: 30.0),
-      child: Expanded(
-        child: TextField(
-          onChanged: function,
-          controller: controller,
-          decoration: InputDecoration(
-              contentPadding: EdgeInsets.zero,
-              enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(10),
-                borderSide: const BorderSide(color: ColorStyles.gray4),
-              ),
-              focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(10),
-                borderSide: const BorderSide(color: ColorStyles.primary80),
-              ),
-              hintText: hintText,
-              prefixIcon: const Icon(
-                Icons.search,
-                color: ColorStyles.gray4,
-              ),
-              hintStyle: TextStyles.smallerTextRegular
-                  .copyWith(color: ColorStyles.gray4)),
-        ),
-      ),
+    return TextField(
+      onChanged: function,
+      controller: controller,
+      decoration: InputDecoration(
+          contentPadding: EdgeInsets.zero,
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10),
+            borderSide: const BorderSide(color: ColorStyles.gray4),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10),
+            borderSide: const BorderSide(color: ColorStyles.primary80),
+          ),
+          hintText: hintText,
+          prefixIcon: const Icon(
+            Icons.search,
+            color: ColorStyles.gray4,
+          ),
+          hintStyle: TextStyles.smallerTextRegular
+              .copyWith(color: ColorStyles.gray4)),
     );
   }
 }
