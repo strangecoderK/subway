@@ -10,6 +10,11 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('지하철 실시간 정보'),
+        backgroundColor: Colors.orangeAccent,
+      ),
+    );
   }
 }
